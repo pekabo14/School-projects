@@ -1,0 +1,34 @@
+		README pre IPK projekt - klient/server ziskabanie informacii o uzivateloch
+		--------------------------------------------------------------------------
+			Autor: Peter Kapicak (xkapic02) - VUT FIT 2017/2018
+========================================================================================================
+
+KLIENT:  
+	Pouzitie:
+		- klient vykona iba jednu operaciu a skonci
+	Spustenie:
+		./ipk-client -h host -p port [-n|-f|-l] login
+		- h host - meno serveru
+		- p port - cislo portu
+		- [-n|-f|-l] - prepinace pre vyhladanie po rade mena, zlozky alebo loginu
+		- login - podla neho sa vyhladava, ak je prepinac -l tak nemusi byt vobec alebo je ako prefix
+	Obmedzenia:
+		- funguje iba pre IPv4
+
+SERVER
+	Pouzitie:
+		- vybavuje viac poziadaviek od klientov, co znamena, ze sa toci v cykle a caka na poziadavky
+	Spustenie:
+		./ipk-server -p port
+		- p port - cislo portu
+	Obmedzenia:
+		- funguje iba pre IPv4
+
+PREKLAD:
+	Prelozenie:
+		make
+	Vymazanie:
+		 make clean
+	Zabalenie do archivu:
+		make zip
+ 
