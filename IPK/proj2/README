@@ -1,0 +1,35 @@
+                    README pre IPK projekt - Bandwidth measurement
+		--------------------------------------------------------------------------
+			     Autor: Peter Kapicak (xkapic02) - VUT FIT 2017/2018
+========================================================================================================
+
+MERAK:
+    Pouzitie:
+        - merak vykona meranie prenosovej rychlosti vypise vysleok a ukonci sa
+    Spustenie:
+        ./ipk-mtrip meter -h host -p port -s velkost -t cas
+
+        - h host - meno serveru
+        - p port - cislo portu
+        - s velkost - velkost sondy(paketu) v Bajtoch(Bytes)
+        - t cas - celkovy cas merania v sekundach
+    Obmedzenia:
+        - poradie parametrov funguje iba v pripade uvedenom v sekcii 'Spustenie'
+
+REFLEKTOR:
+    Pouztie:
+        - prijima sondy z meraku a posiela meraku pocet prijatych sond z jedneho toku(streamu)
+    Spustenie:
+        ./ipk-mtrip reflect -p port
+
+        - p port - cislo portu
+    Obmedzenia:
+        - poradie parametrov funguje iba v pripade uvedenom v sekcii 'Spustenie'
+
+PREKLAD:
+	Prelozenie:
+		make
+	Vymazanie:
+		 make clean
+	Zabalenie do archivu:
+		make zip        
